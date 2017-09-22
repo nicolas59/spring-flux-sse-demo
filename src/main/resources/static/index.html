@@ -29,7 +29,7 @@
 				
 				console.log("Send data ", p);
 				$.ajax({
-					url:"/person",
+					url:"person",
 					method:"POST",
 					data: JSON.stringify(p),
 					contentType:"application/json"
@@ -40,7 +40,7 @@
 	
 		// Create an EventSource object,
 		//passing it the URL of the server sccript
-		var evtSrc = new EventSource("/person");
+		var evtSrc = new EventSource("person");
 
 		//Listen for messages/events on the EventSource
 		evtSrc.onmessage = function(e) {
